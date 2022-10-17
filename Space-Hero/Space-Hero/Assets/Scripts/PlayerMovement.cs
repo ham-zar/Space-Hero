@@ -86,6 +86,10 @@ public class PlayerMovement : MonoBehaviour
             ShowGameoverUi.SetActive(true);
             StartCoroutine(Restartscence());
         }
+        if (collision.gameObject.tag=="Enemy"&& PlayerLife > 0)
+        {
+            PlayerLife--;
+        }
 
         else if (PlayerLife <= 0)
         {
